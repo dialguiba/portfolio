@@ -6,6 +6,9 @@
   list-style-type: none;
   font-size: 2vh;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #eeeeee;
   font-family: "Itim";
