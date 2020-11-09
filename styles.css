@@ -65,6 +65,10 @@ header nav li a {
   color: white;
 }
 
+header nav li a:hover {
+  color: rgb(11, 206, 178);
+}
+
 /* FIN HEADER */
 
 /*INICIO ESTRUCTURA DE TODA LA PAGINA */
