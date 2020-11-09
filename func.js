@@ -7,8 +7,12 @@ var lastScrollTop = 0;
 
 function hideNav() {
   //console.log("ocultar");
-  document.querySelector("nav").style.display = "none";
-  lastScrollTop = 0;
+  setTimeout(() => {
+    /* lastScrollTop = 0; */
+    $("nav").fadeOut("slow", function () {
+      document.querySelector("nav").style.display = "none";
+    });
+  }, 500);
 }
 
 // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
