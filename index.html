@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dialguiba's Portfolio</title>
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Itim:regular" rel="stylesheet" />
@@ -241,10 +241,10 @@
         </div>
         <div id="contact-form-container">
           <form action="POST" data-netlify="true">
-            <input type="text" name="name" id="" placeholder="Your name" />
-            <input type="email" name="email" id="" placeholder="Your Email" />
-            <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
-            <div style="margin: auto" data-netlify-recaptcha="true"></div>
+            <input type="text" name="name" id="" placeholder="Your name" required />
+            <input type="email" name="email" id="" placeholder="Your Email" required />
+            <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
+            <div style="margin: auto" data-netlify-recaptcha="true" required></div>
             <button type="submit">SEND</button>
           </form>
         </div>
