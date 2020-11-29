@@ -239,8 +239,14 @@
           <img src="./assets/contact-icon.svg" class="icons-titles" alt="" />
           <p>CONTACT</p>
         </div>
-        <div style="height: 95%; display: flex; align-items: center; justify-content: center">
-          <img style="height: 80%; width: 80%" src="./assets/letter.svg" alt="" />
+        <div id="contact-form-container">
+          <form action="POST" data-netlify="true">
+            <input type="text" name="name" id="" placeholder="Your name" />
+            <input type="email" name="email" id="" placeholder="Your Email" />
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <div data-netlify-recaptcha="true"></div>
+            <button type="submit">SEND</button>
+          </form>
         </div>
       </section>
     </main>
