@@ -35,6 +35,8 @@ document.addEventListener(
   false
 );
 
-fetch("https://portfolio-api-six.vercel.app/api/projects")
+fetch("https://portfolio-api-six.vercel.app/api/projects", {
+  mode: "no-cors",
+})
   .then((response) => response.json())
   .then((json) => console.log(json));
