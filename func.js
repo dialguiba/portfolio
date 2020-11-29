@@ -34,3 +34,7 @@ document.addEventListener(
   },
   false
 );
+
+fetch("https://portfolio-api-six.vercel.app/api/projects")
+  .then((response) => response.json())
+  .then((json) => console.log(json));
