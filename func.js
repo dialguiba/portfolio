@@ -35,8 +35,37 @@ document.addEventListener(
   false
 );
 
-fetch("https://portfolio-api-six.vercel.app/api/projects", {
-  mode: "no-cors",
-})
-  .then((response) => response.json())
-  .then((json) => console.log(json));
+//async function obtainProjects() {
+//  await fetch("https://portfolio-api-six.vercel.app/api/projects", {
+//    mode: "no-cors",
+//  })
+/* .then((response) => response.json())
+    .then((text) => console.log(text)); */
+//    .then((response) => console.log(response.json()));
+//}
+
+/* const request = async () => {
+  const response = await fetch("https://portfolio-api-six.vercel.app/api/projects", { mode: "no-cors" });
+  const json = await response.json();
+  console.log(json);
+};
+
+request(); */
+
+/* $.get("https://portfolio-api-six.vercel.app/api/projects", function (data, status) {
+  console.log("Data: " + data + "\nStatus: " + status);
+}); */
+$.ajax({
+  type: "GET",
+  url: "https://portfolio-api-six.vercel.app/api/projectsGetTestList",
+  crossDomain: true,
+  contentType: "application/json; charset=utf-8",
+  data: JSON.stringify({ filterID: 0 }),
+  dataType: "json",
+  success: function (data) {
+    data = JSON.parse(data.d);
+    console.log(data);
+  },
+});
+
+/* obtainProjects(); */
