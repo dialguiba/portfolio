@@ -35,14 +35,17 @@ document.addEventListener(
   false
 );
 
-async function obtainProjects() {
-  await fetch("https://portfolio-api-six.vercel.app/api/projects", {
+const obtainProjects = async function () {
+  const response = await fetch("https://portfolio-api-six.vercel.app/api/projects", {
     mode: "no-cors",
-  })
-    .then((response) => response.json())
+  });
 
-    .then((response) => console.log(response.json()));
-}
+  const projects = await response.json();
+
+  return projects;
+};
+
+obtainProjects().then((projects) => console.log(projects));
 
 /* const request = async () => {
   const response = await fetch("https://portfolio-api-six.vercel.app/api/projects", { mode: "no-cors" });
